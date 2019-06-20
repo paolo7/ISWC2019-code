@@ -1,0 +1,112 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     highrisklevel(?x)
+LABEL         ?x has a high risk level!
+RDF           ?x e:hasRiskLevel e:High .
+END PREDICATE
+
+*** Standard SSN predicates
+
+START PREDICATE 
+SIGNATURE     observation(?x)
+LABEL         observation ?x
+RDF           ?x rdf:type sosa:Observation .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     sensor(?x)
+LABEL         sensor ?x
+RDF           ?x rdf:type sosa:Sensor .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     observableProperty(?x)
+LABEL         property ?x
+RDF           ?x rdf:type sosa:ObservableProperty .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfInterest(?x)
+LABEL         feature ?x
+RDF           ?x rdf:type sosa:FeatureOfInterest .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     madeObservation(?x,?y)
+LABEL         ?x made observation ?y
+RDF           ?x sosa:madeObservation ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     measurementOfObservation(?x,?y)
+LABEL         the result of observation ?x is ?y
+RDF           ?x sosa:hasSimpleResult ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     timeOfObservation(?x,?y)
+LABEL         observation ?x was made at time ?y
+RDF           ?x sosa:resultTime ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfObservation(?x,?y)
+LABEL         observation ?x was made on ?y
+RDF           ?x sosa:hasFeatureOfInterest ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     propertyOfObservation(?x,?y)
+LABEL         observation ?x measured ?y
+RDF           ?x sosa:observedProperty ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasClass(?x,?y)
+LABEL         ?y ?x 
+RDF           ?x rdf:type ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     subClass(?x,?y)
+LABEL         a ?y is a ?x 
+RDF           ?x rdfs:subClassOf ?y . 
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+START RULE highrisklevel(?z) <-- propertyOfObservation(?x,e:CO2) AND featureOfObservation(?x,?z) AND measurementOfObservation(?x,?k)
+END RULE
+
+*** subclass inference
+
+START RULE hasClass(?x,?z) <-- hasClass(?x,?y) AND subClass(?y,?z)
+END RULE
+
+*** domain and range rules
+
+START RULE observation(?x) AND observableProperty(?y) <-- propertyOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND featureOfInterest(?y) <-- featureOfObservation(?x,?y)
+END RULE 
+
+START RULE observation(?x) <-- timeOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) <-- measurementOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND sensor(?y) <-- madeObservation(?y,?x)
+END RULE
+
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+START AVAILABLE   propertyOfObservation(?x,?y)
+START AVAILABLE   featureOfObservation(?x,e:MineElevator)
+START AVAILABLE   measurementOfObservation(?x,?y)

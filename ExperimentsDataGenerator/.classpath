@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="gqr/Experiment.java|gqr/Index (2).java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="deps/Aggregator.jar"/>
+	<classpathentry kind="lib" path="deps/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="deps/cgqr.jar"/>
+	<classpathentry kind="lib" path="deps/commons-logging.jar"/>
+	<classpathentry kind="lib" path="deps/derby.jar"/>
+	<classpathentry kind="lib" path="deps/derbyclient.jar"/>
+	<classpathentry kind="lib" path="deps/flexigraph.jar"/>
+	<classpathentry kind="lib" path="deps/hsqldb.jar"/>
+	<classpathentry kind="lib" path="deps/jcommon-1.0.0.jar"/>
+	<classpathentry kind="lib" path="deps/jfreechart-1.0.0.jar"/>
+	<classpathentry kind="lib" path="deps/spring-beans.jar"/>
+	<classpathentry kind="lib" path="deps/spring-core.jar"/>
+	<classpathentry kind="lib" path="deps/spring-dao.jar"/>
+	<classpathentry kind="lib" path="deps/spring-jdbc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

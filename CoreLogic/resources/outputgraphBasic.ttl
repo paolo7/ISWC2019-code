@@ -1,0 +1,674 @@
+@prefix geo:   <http://www.opengis.net/spec/geosparql/1> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix geof:  <http://www.opengis.net/def/function/geosparql/> .
+@prefix e:     <http://example.com/> .
+@prefix gml:   <http://www.opengis.net/ont/gml#> .
+@prefix w3cGeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ogc:   <http://www.opengis.net/> .
+@prefix geon:  <http://www.geonames.org/ontology#> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix ssn:   <http://www.w3.org/ns/ssn/> .
+@prefix example: <http://example.com/> .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ example:gt  "0.33" ] .
+
+[ a       example:Employee ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Room ] .
+
+[ a       example:Room ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Employee ] .
+
+[ a       example:Human ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ a       example:Room ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ example:gt  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Room ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Employee ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ example:gt  "0.33" ] .
+
+[ a       sosa:Observation ] .
+
+example:Employee  rdfs:subClassOf  example:Human .
+
+[ a       example:Room ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ a       example:Employee ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Room ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ a       example:Employee ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       example:Employee ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ a       example:Employee ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+example:CO2concentration
+        a                   sosa:ObservableProperty ;
+        example:maxAllowed  "0.33" ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  ;
+        ogc:hasGeometry     []  .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Employee ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Employee ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Room ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ a       example:Room ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Room ] .
+
+[ a       sosa:Observation ] .
+
+[ a       example:Room ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ example:gt  "0.33" ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ example:gt  "0.33" ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       example:Place ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:within  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ a       example:Human ] .
+
+[ a       example:Room ] .
+
+[ example:gt  "0.33" ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ a       example:Human ] .
+
+[ a       example:Place ] .
+
+[ a       example:Employee ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Employee ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Employee ] .
+
+example:Room  rdfs:subClassOf  example:Place .
+
+[ sosa:hasFeatureOfInterest  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ a       example:Human ] .
+
+[ a       example:Employee ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ example:gt  "0.33" ] .
+
+[ a       example:Room ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Employee ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:within  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ a       example:Room ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ a       example:Human ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ a       example:Human ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ sosa:hasFeatureOfInterest  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ a       example:Human ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Place ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ a       example:Employee ] .
+
+[ a       example:Room ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Room ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Room ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       example:Human ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       example:Employee ] .
+
+[ a       example:Room ] .
+
+[ a       example:Place ] .
+
+[ sosa:observedProperty  example:CO2concentration ] .
+
+[ a       sosa:Observation ] .
+
+[ a       example:Human ] .
+
+[ a       example:Employee ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ a       example:Human ] .
+
+[ sosa:hasSimpleResult  []  ] .
+
+[ a       sosa:FeatureOfInterest ] .
+
+[ a       example:Human ] .
+
+[ ogc:hasGeometry  []  ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ ogc:within  []  ] .
+
+[ ogc:within  []  ] .
+
+[ a       sosa:Observation ] .
+
+[ example:gt  "0.33" ] .
+
+[ sosa:hasFeatureOfInterest  []  ] .
+
+[ a       example:Place ] .

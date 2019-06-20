@@ -1,0 +1,1210 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.w3.org/ns/sosa/"
+    xmlns:j.1="http://www.opengis.net/ont/"
+    xmlns:j.2="http://www.opengis.net/ont/gml#"
+    xmlns:j.3="http://example.com/"
+    xmlns:j.4="http://www.opengis.net/rdf#" > 
+  <rdf:Description rdf:about="http://example.com/2181537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/218"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/43"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2181537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2781537203550276">
+    <j.2:pos>[6.800000000000001,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo130">
+    <j.1:gmlpos>{[5.6000000000000005,28.8,0.0] , [5.6000000000000005,25.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/121">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo121"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo154">
+    <j.1:gmlpos>{[0.0,28.8,0.0] , [0.0,36.0,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/145">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo145"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2731537203550276">
+    <j.2:pos>[1.2000000000000002,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2221537203550275">
+    <j.2:pos>[-5.199999999999999,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2271537203550275">
+    <j.2:pos>[-2.0,20.400000000000006,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2091537203550274">
+    <j.2:pos>[0.0,10.800000000000002,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2641537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/264"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/130"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2641537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2041537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/204"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/20"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2041537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2181537203550275">
+    <j.2:pos>[-2.0,8.4,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2781537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/278"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/172"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2781537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2221537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/222"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2221537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo81">
+    <j.1:gmlpos>{[0.0,21.6,0.0] , [0.0,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2271537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/227"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2271537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2091537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/209"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/33"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2091537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2041537203550274">
+    <j.2:pos>[-1.6666666666666665,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2411537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/241"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2411537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/144">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1961537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/196"/>
+    <j.0:hasSimpleResult>[0.6404785906466246,0.0,0.0]</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/195"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1961537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2691537203550276">
+    <j.2:pos>[0.0,31.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2131537203550275">
+    <j.2:pos>[-1.6666666666666665,14.4,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2501537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/250"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/145"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2501537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2131537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/213"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/53"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2131537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2641537203550276">
+    <j.2:pos>[5.6000000000000005,27.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2691537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/269"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2691537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo164">
+    <j.1:gmlpos>{[0.0,36.0,0.0] , [5.6000000000000005,36.0,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2831537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/283"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/145"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2831537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/135">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo135"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/191">
+    <rdf:type rdf:resource="http://example.com/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2461537203550276">
+    <j.2:pos>[-2.0,24.400000000000002,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2371537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/237"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2371537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2321537203550275">
+    <j.2:pos>[0.0,20.400000000000006,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2501537203550276">
+    <j.2:pos>[-0.4,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2451537203550275">
+    <j.2:pos>[-2.0,24.400000000000002,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2821537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/282"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/180"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2821537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2551537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/255"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/113"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2551537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2591537203550276">
+    <j.2:pos>[14.000000000000004,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2721537203550276">
+    <j.2:pos>[0.0,35.59999999999999,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2631537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/263"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/130"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2631537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1901537203550273">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/190"/>
+    <j.0:hasSimpleResult>[0.4050461891899888,0.0,0.0]</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/189"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1901537203550273"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2361537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/236"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2361537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2771537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/277"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/172"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2771537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2191537203550275">
+    <j.2:pos>[-2.8,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2211537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/221"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2211537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2311537203550275">
+    <j.2:pos>[0.0,20.400000000000006,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2051537203550274">
+    <j.2:pos>[-2.0,4.3999999999999995,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo140">
+    <j.1:gmlpos>{[5.6000000000000005,25.6,0.0] , [3.2,25.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/153">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/189">
+    <rdf:type rdf:resource="http://example.com/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2261537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/226"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2261537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2421537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/242"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2421537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2001537203550274">
+    <j.2:pos>[0.0,2.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2141537203550275">
+    <j.2:pos>[-1.6666666666666665,14.4,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2811537203550276">
+    <j.2:pos>[13.200000000000003,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2511537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/251"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/105"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2511537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2261537203550275">
+    <j.2:pos>[-2.0,18.800000000000004,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2001537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/200"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/0"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2001537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/67">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo67"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/43">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo43"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2141537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/214"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/53"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2141537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2301537203550275">
+    <j.2:pos>[-1.6666666666666665,21.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/140">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo140"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2121537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/212"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/33"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2121537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2281537203550275">
+    <j.2:pos>[-2.0,20.400000000000006,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2441537203550275">
+    <j.2:pos>[-1.6666666666666665,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2681537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/268"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2681537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/164">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo164"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/188">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2531537203550276">
+    <j.2:pos>[4.3999999999999995,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1991537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/199"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/0"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1991537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2381537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/238"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2381537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2791537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/279"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/172"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2791537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2651537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/265"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/135"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2651537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2121537203550275">
+    <j.2:pos>[0.0,12.400000000000004,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2681537203550276">
+    <j.2:pos>[0.0,30.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2231537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/223"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2231537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2171537203550275">
+    <j.2:pos>[-2.0,8.4,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2581537203550276">
+    <j.2:pos>[11.600000000000001,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2031537203550274">
+    <j.2:pos>[-1.6666666666666665,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2811537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/281"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/180"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2811537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2281537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/228"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2281537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2541537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/254"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/105"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2541537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2401537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/240"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2401537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2021537203550274">
+    <j.2:pos>[0.0,6.799999999999999,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2161537203550275">
+    <j.2:pos>[-2.0,11.600000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2671537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/267"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2671537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2111537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/211"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/33"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2111537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2291537203550275">
+    <j.2:pos>[-1.6666666666666665,21.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2551537203550276">
+    <j.2:pos>[7.6000000000000005,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2401537203550275">
+    <j.2:pos>[0.0,25.200000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2241537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/224"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2241537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2541537203550276">
+    <j.2:pos>[4.3999999999999995,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2411537203550275">
+    <j.2:pos>[0.0,27.600000000000005,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2531537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/253"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/105"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2531537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2841537203550276">
+    <j.2:pos>[-5.199999999999999,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1901537203550273">
+    <j.2:pos>[0.4050461891899888,0.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/77">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo77"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/53">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo53"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2151537203550275">
+    <j.2:pos>[-2.0,11.600000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/130">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo130"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2011537203550274">
+    <j.2:pos>[0.0,6.799999999999999,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/154">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo154"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2251537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/225"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/67"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2251537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo105">
+    <j.1:gmlpos>{[0.0,28.8,0.0] , [5.6000000000000005,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2421537203550275">
+    <j.2:pos>[0.0,27.600000000000005,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2661537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/266"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/135"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2661537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2561537203550276">
+    <j.2:pos>[7.6000000000000005,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2821537203550276">
+    <j.2:pos>[13.200000000000003,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2101537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/210"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/33"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2101537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2831537203550276">
+    <j.2:pos>[-5.199999999999999,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2521537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/252"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/105"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2521537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo172">
+    <j.1:gmlpos>{[5.6000000000000005,36.0,0.0] , [11.200000000000001,36.0,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2391537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/239"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/81"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2391537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/197">
+    <rdf:type rdf:resource="http://example.com/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2431537203550275">
+    <j.2:pos>[-1.6666666666666665,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2521537203550276">
+    <j.2:pos>[2.0,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2571537203550276">
+    <j.2:pos>[11.600000000000001,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1981537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/198"/>
+    <j.0:hasSimpleResult>[-0.89777052510091,0.0,0.0]</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/197"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1981537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2801537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/280"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/172"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2801537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2431537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/243"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/101"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2431537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2571537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/257"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2571537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/105">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo105"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/129">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo53">
+    <j.1:gmlpos>{[0.0,14.4,0.0] , [-2.0,14.4,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1981537203550274">
+    <j.2:pos>[-0.89777052510091,0.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo77">
+    <j.1:gmlpos>{[0.0,21.6,0.0] , [-2.0,21.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2391537203550275">
+    <j.2:pos>[0.0,25.200000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2801537203550276">
+    <j.2:pos>[9.200000000000001,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2201537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/220"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2201537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2761537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/276"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/164"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2761537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2481537203550276">
+    <j.2:pos>[-2.0,22.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2711537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/271"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2711537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2341537203550275">
+    <j.2:pos>[0.0,17.200000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/172">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo172"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2701537203550276">
+    <j.2:pos>[0.0,31.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2481537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/248"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/91"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2481537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2341537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/234"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2341537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/10">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo10"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2071537203550274">
+    <j.2:pos>[-0.4,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2701537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/270"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2701537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2621537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/262"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2621537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo0">
+    <j.1:gmlpos>{[0.0,0.0,0.0] , [0.0,7.2,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2671537203550276">
+    <j.2:pos>[0.0,30.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2021537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/202"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/0"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2021537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2161537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/216"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/43"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2161537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2711537203550276">
+    <j.2:pos>[0.0,35.59999999999999,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2241537203550275">
+    <j.2:pos>[-2.0,15.600000000000001,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2611537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/261"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2611537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2111537203550275">
+    <j.2:pos>[0.0,12.400000000000004,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/57">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo57"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo43">
+    <j.1:gmlpos>{[-2.0,7.2,0.0] , [-2.0,14.4,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/33">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo33"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2291537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/229"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/77"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2291537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo67">
+    <j.1:gmlpos>{[-2.0,14.4,0.0] , [-2.0,21.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2511537203550276">
+    <j.2:pos>[2.0,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1921537203550274">
+    <j.2:pos>[-0.5085982964964677,0.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo113">
+    <j.1:gmlpos>{[5.6000000000000005,28.8,0.0] , [11.200000000000001,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo101">
+    <j.1:gmlpos>{[0.0,28.8,0.0] , [-2.0,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2061537203550274">
+    <j.2:pos>[-2.0,4.3999999999999995,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2841537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/284"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/145"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2841537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2251537203550275">
+    <j.2:pos>[-2.0,18.800000000000004,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2151537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/215"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/43"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2151537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2011537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/201"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/0"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2011537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2561537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/256"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/113"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2561537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo180">
+    <j.1:gmlpos>{[11.200000000000001,36.0,0.0] , [16.8,36.0,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo20">
+    <j.1:gmlpos>{[0.0,7.2,0.0] , [-2.0,7.2,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2661537203550276">
+    <j.2:pos>[6.0,25.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/32">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2101537203550275">
+    <j.2:pos>[0.0,10.800000000000002,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/20">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo20"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/101">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo101"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/113">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo113"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2351537203550275">
+    <j.2:pos>[0.0,14.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2601537203550276">
+    <j.2:pos>[14.000000000000004,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/193">
+    <rdf:type rdf:resource="http://example.com/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2491537203550276">
+    <j.2:pos>[-0.4,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1921537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/192"/>
+    <j.0:hasSimpleResult>[-0.5085982964964677,0.0,0.0]</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/191"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1921537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1941537203550274">
+    <j.2:pos>[-0.4949471013103621,0.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2721537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/272"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/154"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2721537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2351537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/235"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2351537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2491537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/249"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/145"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2491537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo33">
+    <j.1:gmlpos>{[0.0,7.2,0.0] , [0.0,14.4,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo57">
+    <j.1:gmlpos>{[0.0,14.4,0.0] , [0.0,21.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2651537203550276">
+    <j.2:pos>[6.0,25.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2471537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/247"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/91"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2471537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2231537203550275">
+    <j.2:pos>[-2.0,15.600000000000001,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/81">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo81"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2331537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/233"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2331537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo135">
+    <j.1:gmlpos>{[5.6000000000000005,25.6,0.0] , [8.0,25.6,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2031537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/203"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/20"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2031537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2171537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/217"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/43"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2171537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2741537203550276">
+    <j.2:pos>[1.2000000000000002,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2581537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/258"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2581537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/180">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo180"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2081537203550274">
+    <j.2:pos>[-0.4,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2301537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/230"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/77"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2301537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/0">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo0"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2331537203550275">
+    <j.2:pos>[0.0,17.200000000000003,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2441537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/244"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/101"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2441537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2471537203550276">
+    <j.2:pos>[-2.0,22.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1991537203550274">
+    <j.2:pos>[0.0,2.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo10">
+    <j.1:gmlpos>{[-2.0,0.0,0.0] , [-2.0,7.2,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2601537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/260"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2601537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2381537203550275">
+    <j.2:pos>[0.0,23.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2081537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/208"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2081537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2791537203550276">
+    <j.2:pos>[9.200000000000001,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2751537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/275"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/164"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2751537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/195">
+    <rdf:type rdf:resource="http://example.com/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2461537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/246"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/91"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2461537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2371537203550275">
+    <j.2:pos>[0.0,23.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2321537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/232"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2321537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2451537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/245"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/91"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2451537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2761537203550276">
+    <j.2:pos>[3.5999999999999996,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2751537203550276">
+    <j.2:pos>[3.5999999999999996,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2201537203550275">
+    <j.2:pos>[-2.8,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2591537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/259"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/121"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2591537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2311537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/231"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/57"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2311537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2071537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/207"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2071537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo91">
+    <j.1:gmlpos>{[-2.0,21.6,0.0] , [-2.0,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2631537203550276">
+    <j.2:pos>[5.6000000000000005,27.6,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2741537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/274"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/164"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2741537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/1961537203550274">
+    <j.2:pos>[0.6404785906466246,0.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/139">
+    <rdf:type rdf:resource="http://example.com/MiningSite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2361537203550275">
+    <j.2:pos>[0.0,14.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo121">
+    <j.1:gmlpos>{[11.200000000000001,28.8,0.0] , [16.8,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/1941537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/194"/>
+    <j.0:hasSimpleResult>[-0.4949471013103621,0.0,0.0]</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/193"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/1941537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2051537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/205"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/10"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2051537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/91">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo91"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo145">
+    <j.1:gmlpos>{[0.0,28.8,0.0] , [-5.6000000000000005,28.8,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2771537203550276">
+    <j.2:pos>[6.800000000000001,36.0,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2191537203550275">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/219"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/24"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2191537203550275"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2211537203550275">
+    <j.2:pos>[-5.199999999999999,7.2,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2611537203550276">
+    <j.2:pos>[16.400000000000006,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="geohttp://example.com/2621537203550276">
+    <j.2:pos>[16.400000000000006,28.8,0.0]</j.2:pos>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2731537203550276">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/273"/>
+    <j.0:hasSimpleResult>"24.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/164"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2731537203550276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/2061537203550274">
+    <j.0:resultTime rdf:datatype="java:java.util.Date">Mon Sep 17 17:59:10 BST 2018</j.0:resultTime>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:madeBySensor rdf:resource="http://example.com/206"/>
+    <j.0:hasSimpleResult>"0.0"</j.0:hasSimpleResult>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.com/10"/>
+    <j.4:hasGeometry rdf:resource="geohttp://example.com/2061537203550274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/24">
+    <j.4:hasGeometry rdf:resource="http://example.com/geo24"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/geo24">
+    <j.1:gmlpos>{[0.0,7.2,0.0] , [-5.6000000000000005,7.2,0.0]}</j.1:gmlpos>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,21 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.w3.org/ns/sosa/"
+    xmlns:j.1="http://www.opengis.net/ont/"
+    xmlns:j.2="http://example.com/"
+    xmlns:j.3="http://www.opengis.net/rdf#" > 
+  <rdf:Description rdf:about="http://example.org/LAMBDA">
+    <j.3:hasGeometry rdf:resource="http://example.org/LAMBDA"/>
+    <rdf:type rdf:resource="http://example.com/Person"/>
+    <j.0:observedProperty rdf:resource="http://example.com/Location"/>
+    <j.0:resultTime rdf:resource="http://example.org/LAMBDA"/>
+    <j.0:observedProperty rdf:resource="http://example.com/CO2concentration"/>
+    <j.0:hasSimpleResult rdf:resource="http://example.org/LAMBDA"/>
+    <j.0:madeBySensor rdf:resource="http://example.org/LAMBDA"/>
+    <rdf:type rdf:resource="http://example.com/Tunnel"/>
+    <j.0:hasFeatureOfInterest rdf:resource="http://example.org/LAMBDA"/>
+    <j.1:gmlpos rdf:resource="http://example.org/LAMBDA"/>
+    <rdf:type rdf:resource="http://example.com/MainTunnel"/>
+    <j.0:observedProperty rdf:resource="http://example.com/Temperature"/>
+  </rdf:Description>
+</rdf:RDF>

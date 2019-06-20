@@ -1,0 +1,36 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     triple(?x, ?y, ?z)
+LABEL         triple ?x ?y ?z
+RDF           ?x ?y ?z .
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+START RULE triple(?v3, ex:b, ex:b) <-- triple(ex:a, ex:a, ?v3)
+END RULE
+
+START RULE triple(ex:d, ex:d, ?v3) <-- triple(ex:c, ex:c, ?v3)
+END RULE
+
+START RULE triple(ex:c, ex:c, ?v3) <-- triple(?v3, ex:b, ex:b)
+END RULE
+
+START RULE triple(ex:k, ex:k, ?v3) <-- triple(ex:a, ex:a, ?v3)
+END RULE
+
+START RULE triple(ex:d, ex:d, ?v3) <-- triple(ex:k, ex:k, ?v3)
+END RULE
+
+START RULE triple(ex:ERROR, ex:ERROR, ?v3) <-- triple(ex:c, ex:c, ?v3) AND triple(ex:o, ex:o, ?v3)
+END RULE
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+
+START AVAILABLE   triple(ex:a,ex:a,?v1)
+START AVAILABLE   triple(ex:o, ex:o, "asdas")

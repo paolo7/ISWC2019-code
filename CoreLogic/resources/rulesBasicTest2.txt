@@ -1,0 +1,93 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     typeA(?x)
+LABEL         typeA ?x
+RDF           ?x rdf:type example:testA .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     typeB(?x)
+LABEL         testB ?x
+RDF           ?x rdf:type example:testB .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     propertyC(?x,?y)
+LABEL         propertyC ?x
+RDF           ?x example:Cx example:Cx . ?y example:Cy example:Cy .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     propertyD(?x,?y)
+LABEL         propertyD ?x
+RDF           ?x example:Dx example:Dx . ?y example:Dy example:Dy .
+END PREDICATE
+
+*** OWL predicates
+
+START PREDICATE 
+SIGNATURE     disjoint(?x,?y)
+LABEL         a ?x cannot be a ?y
+RDF           ?x owl:disjointWith ?y .
+END PREDICATE
+
+*** RDFS
+
+START PREDICATE 
+SIGNATURE     triple(?x,?y, ?z)
+LABEL         ?x ?y ?z
+RDF           ?x ?y ?z . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasClass(?x,?y)
+LABEL         ?x is a ?y 
+RDF           ?x rdf:type ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     subClass(?x,?y)
+LABEL         a ?x is a ?y 
+RDF           ?x rdfs:subClassOf ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     domain(?x,?y)
+LABEL         domain of ?x is ?y
+RDF           ?x rdfs:domain ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     range(?x,?y)
+LABEL         range of ?x is ?y 
+RDF           ?x rdfs:range ?y . 
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+******* Standard Ontological Rules
+*******
+
+*** subclass inference
+
+START RULE propertyC(?v0,?v1) <-- propertyD(?v0,?v1) AND typeB(?v1)
+END RULE
+
+START RULE typeA(?v0) <-- propertyC(?v1,?v0)
+END RULE
+
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+** Basic
+
+START AVAILABLE ASSERTED   disjoint(example:testA,example:testB)
+
+** Domain specific sensor information
+
+START AVAILABLE   typeB(?x)
+START AVAILABLE   propertyD(?z,?y)

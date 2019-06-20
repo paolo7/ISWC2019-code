@@ -1,0 +1,63 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     triple(?x, ?y, ?z)
+LABEL         triple ?x ?y ?z
+RDF           ?x ?y ?z .
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+START RULE triple(?v3, ex:b, ex:b) <-- triple(ex:a, ex:a, ?v3)
+END RULE
+* EXPECTED: triple(?v0-, ex:b, ex:b)
+
+START RULE triple(ex:c, ?v3, ex:c) <-- triple(ex:a, ex:a, ?v3)
+END RULE
+* EXPECTED triple(ex:c, ?v0-, ex:c)
+
+START RULE triple(ex:d, ex:d, ?v3) <-- triple(ex:a, ex:a, ?v3)
+END RULE
+* EXPECTED triple(ex:d, ex:d, ?v0+)
+
+START RULE triple(ex:j, ex:j, ?v3) <-- triple(ex:a, ex:a, ?v3) AND triple(?v3,ex:k,ex:k)
+END RULE
+* EXPECTED triple(ex:j, ex:j, ?v0-)
+
+
+
+
+START RULE triple(?v3, ex:b1, ex:b1) <-- triple(ex:a1, ex:a1, ?v3)
+END RULE
+* NOT EXPECTED: triple("ERROR", ex:b, ex:b)
+
+START RULE triple(ex:j1, ex:j1, ?v3) <-- triple(ex:a1, ex:a1, ?v3) AND triple(?v3,ex:k,ex:k)
+END RULE
+* NOT EXPECTED triple(ex:j1, ex:j1, "ERROR")
+
+START RULE triple(ex:j2, ex:j2, ?v3) <-- triple(ex:a1, ex:a1, ?v3) AND triple(ex:j, ex:j, ?v1)
+END RULE
+* NOT EXPECTED triple(ex:j2, ex:j2, "ERROR")
+
+
+
+
+
+START RULE triple(ex:j3, ex:j3, ?v3) <-- triple(ex:a, ex:a, ?v3) AND triple(ex:j, ex:j, ?v3)
+END RULE
+* EXPECTED triple(ex:j3, ex:j3, ?v0-)
+
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+
+START AVAILABLE   triple(ex:a,ex:a,?v1)
+START AVAILABLE   triple(?v1,ex:k,ex:k)
+
+START AVAILABLE   triple(ex:a1,ex:a1,"ERROR")
+START AVAILABLE   triple(?v1,ex:k1,ex:k1)
+
+

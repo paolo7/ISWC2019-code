@@ -1,0 +1,97 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     employee(?x)
+LABEL         employee ?x
+RDF           ?x rdf:type example:Employee .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     address(?x)
+LABEL         address ?x
+RDF           ?x rdf:type example:Address .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasAddress(?x, ?y)
+LABEL         ?y hasAddress ?y
+RDF           ?x example:hasAddress ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     room(?x)
+LABEL         room ?x
+RDF           ?x rdf:type example:Room .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     disjoint(?x,?y)
+LABEL         A ' ?x ' cannot be a ' ?y
+RDF           ?x owl:disjointWith ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     impossible(?x,?y)
+LABEL         ?x should never exceed ?y when humans are nearby
+RDF           ?x example:IMPOSSIBLE ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     possible(?x,?y)
+LABEL         ?x should never exceed ?y when humans are nearby
+RDF           ?x example:possible ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasClass(?x,?y)
+LABEL         ?y ?x 
+RDF           ?x rdf:type ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     subClass(?x,?y)
+LABEL         a ?y is a ?x 
+RDF           ?x rdfs:subClassOf ?y . 
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+START RULE hasAddress(?x,?y) <-- employee(?x) AND address(?y)
+END RULE
+
+START RULE impossible(?x,?y) <-- hasAddress(?x,?y) AND room(?x)
+END RULE
+
+START RULE possible(?x,?y) <-- employee(?x) AND room(?y)
+END RULE
+
+START RULE impossible(?x,?x) <-- employee(?x) AND room(?x)
+END RULE
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+
+START AVAILABLE   employee(?x)
+
+START AVAILABLE   room(?x)
+
+START AVAILABLE   address(example:add)
+
+START AVAILABLE   subClass(example:Employee,example:Human)
+
+START AVAILABLE   disjoint(example:Human,example:Place)
+START AVAILABLE   disjoint(example:Human,example:Room)
+
+START AVAILABLE   disjoint(sosa:Observation,example:Place)
+START AVAILABLE   disjoint(sosa:Observation,example:Human)
+
+START AVAILABLE   disjoint(sosa:ObservableProperty,sosa:Observation)
+START AVAILABLE   disjoint(sosa:ObservableProperty,example:Human)
+START AVAILABLE   disjoint(sosa:ObservableProperty,example:Place)
+
+START AVAILABLE   disjoint(sosa:FeatureOfInterest,sosa:Observation)
+START AVAILABLE   disjoint(sosa:FeatureOfInterest,sosa:ObservableProperty)
+

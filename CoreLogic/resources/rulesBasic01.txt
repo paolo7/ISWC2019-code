@@ -1,0 +1,369 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     tunnel(?x)
+LABEL         tunnel ?x
+RDF           ?x rdf:type example:Tunnel .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     geofenced(?x)
+LABEL         ?x is geofenced
+RDF           ?x rdf:type example:Geofenced .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     mainTunnel(?x)
+LABEL         main escape tunnel ?x
+RDF           ?x rdf:type example:MainTunnel .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     person(?x)
+LABEL         person ?x
+RDF           ?x rdf:type example:Person .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     place(?x)
+LABEL         place ?x
+RDF           ?x rdf:type example:Place .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     >(?x,?y)
+LABEL         ?x is greater than ?y
+RDF           FILTER ( ?x > ?y )
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     <(?x,?y)
+LABEL         ?x is less than ?y
+RDF           FILTER ( ?x < ?y )
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     =(?x,?y)
+LABEL         ?x is equal to ?y
+RDF           FILTER ( ?x = ?y )
+END PREDICATE
+
+*** OWL predicates
+
+START PREDICATE 
+SIGNATURE     disjoint(?x,?y)
+LABEL         a ?x cannot be a ?y
+RDF           ?x owl:disjointWith ?y .
+END PREDICATE
+
+*** Geographical predicates
+
+START PREDICATE 
+SIGNATURE     location(?x)
+LABEL         location ?x
+RDF           ?x rdf:type ogc:Geometry .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasLocation(?x,?y)
+LABEL         ?x is located at ?y
+RDF           ?x ogc3:hasGeometry ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasWKTLocation(?x,?y,?z)
+LABEL         ?x is located at ?y with coordinates ?z 
+RDF           ?x ogc3:hasGeometry ?y . ?y ogc2:asWKT ?z .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     inside(?x,?y)
+LABEL         ?x is situated inside ?y
+RDF           ?x example:inside ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     insideWKT(?x,?y, ?xWKT, ?yWKT)
+LABEL         WKT ?x ?y
+RDF           ?x ogc2:asWKT ?xWKT . ?y ogc2:asWKT ?yWKT . FILTER (geof:sfContains( ?yWKT , ?xWKT ) && !sameTerm( ?x , ?y ))
+END PREDICATE
+
+*** Actuators
+
+START PREDICATE 
+SIGNATURE     fire(?x)
+LABEL         there is a fire in ?x
+RDF           ?x example:containsEvent example:Fire .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     fullEvacuation()
+LABEL         evacuate the whole mine
+RDF           example:ActiveActions example:includes example:FullEvacuation .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     evacuate(?x)
+LABEL         evacuate ?x
+RDF           example:ActiveActions example:includes example:PartialEvacuation . example:PartialEvacuation example:involves ?x .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     ventilate(?x)
+LABEL         ventilate ?x
+RDF           example:ActiveActions example:includes example:Ventilation . example:Ventilation example:involves ?x .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     recall(?x)
+LABEL         recall ?x
+RDF           example:ActiveActions example:includes example:EmployeeRecall . example:EmployeeRecall example:involves ?x .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     dispatchFireTeam(?x)
+LABEL         dispatch a fire team to ?x
+RDF           example:ActiveActions example:includes example:FireTeamDispatch . example:FireTeamDispatch example:involves ?x .
+END PREDICATE
+
+*** Standard SSN predicates
+
+START PREDICATE 
+SIGNATURE     observation(?x)
+LABEL         ?x is an observation
+RDF           ?x rdf:type sosa:Observation .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     sensor(?x)
+LABEL         ?x is a sensor
+RDF           ?x rdf:type sosa:Sensor .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     observableProperty(?x)
+LABEL         ?x is an observable property
+RDF           ?x rdf:type sosa:ObservableProperty .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfInterest(?x)
+LABEL         ?x is a feature of interest
+RDF           ?x rdf:type sosa:FeatureOfInterest .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     madeObservation(?x,?y)
+LABEL         ?x made observation ?y
+RDF           ?x sosa:madeObservation ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     measurementOfObservation(?x,?y)
+LABEL         the result of observation ?x is ?y
+RDF           ?x sosa:hasSimpleResult ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     timeOfObservation(?x,?y)
+LABEL         observation ?x was made at time ?y
+RDF           ?x sosa:resultTime ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfObservation(?x,?y)
+LABEL         ?y is the subject of observation ?x 
+RDF           ?x sosa:hasFeatureOfInterest ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     propertyOfObservation(?x,?y)
+LABEL         observation ?x measured ?y
+RDF           ?x sosa:observedProperty ?y . 
+END PREDICATE
+
+*** RDFS
+
+START PREDICATE 
+SIGNATURE     triple(?x,?y, ?z)
+LABEL         ?x ?y ?z
+RDF           ?x ?y ?z . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasClass(?x,?y)
+LABEL         ?x is a ?y 
+RDF           ?x rdf:type ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     subClass(?x,?y)
+LABEL         a ?x is a ?y 
+RDF           ?x rdfs:subClassOf ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     domain(?x,?y)
+LABEL         domain of ?x is ?y
+RDF           ?x rdfs:domain ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     range(?x,?y)
+LABEL         range of ?x is ?y 
+RDF           ?x rdfs:range ?y . 
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+******* Standard Ontological Rules
+*******
+
+*** subclass inference
+
+START RULE hasClass(?x,?z) <-- hasClass(?x,?y) AND subClass(?y,?z)
+END RULE
+
+*** domain and range rules of the SNN ontology
+
+START RULE observation(?x) AND observableProperty(?y) <-- propertyOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND featureOfInterest(?y) <-- featureOfObservation(?x,?y)
+END RULE 
+
+START RULE observation(?x) <-- timeOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) <-- measurementOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND sensor(?y) <-- madeObservation(?y,?x)
+END RULE
+
+******* implementation specific geographical rules
+*******
+
+*** rules for "inside"
+
+START RULE inside(?x,?y) <-- insideWKT(?x,?y, ?xWTK, ?yWTK)
+END RULE
+
+START RULE hasWKTLocation(?x,?b,?y) <-- propertyOfObservation(?z,example:Location) AND featureOfObservation(?z,?x) AND measurementOfObservation(?z,?y) 
+END RULE
+
+START RULE hasLocation(?x,?y) <-- hasWKTLocation(?x,?y,?z)
+END RULE
+
+******* IoT Rules
+*******
+
+*** 1) elevating the class name
+
+START RULE [?y](?x) <-- hasClass(?x,?y)
+LABEL      ?y ?x
+END RULE
+
+*** 2) Property Assignment. Elevating the property-feature-measurment triple
+
+START RULE has[?v0](?v3,?v1) <-- measurementOfObservation(?v2,?v1) AND propertyOfObservation(?v2,?v0) AND featureOfObservation(?v2,?v3)
+LABEL      the ?v0 of ?v3 is ?v1 
+END RULE
+
+*** 3) Class-dependent property assignment. The predicate selects the measurements of a certain properties detected on members of a certain class.
+
+START RULE [?v0]Of[?v1](?v4,?v2) <-- measurementOfObservation(?v3,?v2) AND propertyOfObservation(?v3,?v0) AND featureOfObservation(?v3,?v4) AND hasClass(?v4,?v1)
+LABEL      the ?v0 of ?v1 ?v4 is ?v2 
+END RULE
+
+*** 4) Class-dependent Geographical containment. This depends on an implementation-specific definition of “inside”. Here we use WKT coordinates and a geosparql engine
+*** The predicate "inside" is the class independent version of this one
+
+START RULE [?xC]In[?yC](?x,?y) <-- hasClass(?x,?xC) AND hasClass(?y,?yC) AND hasLocation(?x,?xL) AND hasLocation(?y,?yL) AND inside(?xL,?yL) AND place(?y)
+LABEL      ?xC ?x is in ?yC ?y
+END RULE
+
+*** Measurement containment. Measurements inside other entities
+
+* START RULE [?xC]MeasuredIn[?yC](?x,?y) <-- propertyOfObservation(?x,?xC) AND hasClass(?y,?yC) AND hasLocation(?x,?xL) AND hasLocation(?y,?yL) AND inside(?xL,?yL) AND place(?y)
+* LABEL      ?xC ?x measured in ?yC ?y
+* END RULE
+
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+** Basic
+
+START AVAILABLE   >(?x,?y)
+START AVAILABLE   <(?x,?y)
+START AVAILABLE   =(?x,?y)
+
+START AVAILABLE ASSERTED   domain(sosa:madeObservation,sosa:Sensor)
+START AVAILABLE ASSERTED   range(sosa:madeObservation,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:hasSimpleResult,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:resultTime,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:hasFeatureOfInterest,sosa:Observation)
+START AVAILABLE ASSERTED   range(sosa:hasFeatureOfInterest,sosa:FeatureOfInterest)
+START AVAILABLE ASSERTED   domain(sosa:observedProperty,sosa:Observation)
+START AVAILABLE ASSERTED   range(sosa:observedProperty,sosa:ObservableProperty)
+
+START AVAILABLE ASSERTED   disjoint(sosa:Sensor,sosa:Observation)
+START AVAILABLE ASSERTED   disjoint(sosa:Sensor,sosa:ObservableProperty)
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,sosa:Observation)
+START AVAILABLE ASSERTED   disjoint(sosa:FeatureOfInterest,sosa:Observation)
+START AVAILABLE ASSERTED   disjoint(sosa:FeatureOfInterest,sosa:ObservableProperty)
+
+** Labels
+
+START AVAILABLE ASSERTED triple(example:COconcentration,rdfs:label,"carbon monoxide")
+START AVAILABLE ASSERTED triple(example:Temperature,rdfs:label,"temperature")
+START AVAILABLE ASSERTED triple(example:Location,rdfs:label,"position")
+START AVAILABLE ASSERTED triple(example:Person,rdfs:label,"person")
+START AVAILABLE ASSERTED triple(example:Tunnel,rdfs:label,"tunnel")
+START AVAILABLE ASSERTED triple(example:Place,rdfs:label,"location")
+START AVAILABLE ASSERTED triple(example:MainTunnel,rdfs:label,"main escape tunnel")
+START AVAILABLE ASSERTED triple(example:Fire,rdfs:label,"fire")
+START AVAILABLE ASSERTED triple(example:Geofenced,rdfs:label,"geofenced area")
+
+** Domain specific ontological information
+
+START AVAILABLE ASSERTED   range(ogc:within,example:Place)
+START AVAILABLE ASSERTED   subClass(example:Geofenced,example:Place)
+START AVAILABLE ASSERTED   subClass(example:Tunnel,example:Place)
+START AVAILABLE ASSERTED   subClass(example:MainTunnel,example:Tunnel)
+
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,example:Person)
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,example:Place)
+START AVAILABLE ASSERTED   disjoint(example:Person,example:Place)
+START AVAILABLE ASSERTED   disjoint(sosa:Observation,example:Place)
+START AVAILABLE ASSERTED   disjoint(ogc:Geometry,example:Place)
+START AVAILABLE ASSERTED   disjoint(sosa:Observation,example:Person)
+
+** Domain specific sensor information
+
+START AVAILABLE   insideWKT(?x,?y,?xl,?yl)
+
+START AVAILABLE   featureOfObservation(?x,?y)
+START AVAILABLE   measurementOfObservation(?x,?y)
+
+START AVAILABLE   hasLocation(?x,?y)
+START AVAILABLE   propertyOfObservation(?x,example:COconcentration)
+START AVAILABLE   propertyOfObservation(?x,example:Temperature)
+
+START AVAILABLE   person(?x)
+START AVAILABLE   tunnel(?x)
+START AVAILABLE   mainTunnel(?x)
+START AVAILABLE   geofenced(?x)
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+PRINT PREDICATE fire(?x)
+PRINT PREDICATE fullEvacuation()
+PRINT PREDICATE evacuate(?x)
+PRINT PREDICATE ventilate(?x)
+PRINT PREDICATE recall(?x)
+PRINT PREDICATE dispatchFireTeam(?x)

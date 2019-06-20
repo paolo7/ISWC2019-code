@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix example: <http://example.com/> .
+@prefix ogc: <http://www.opengis.net/> . 
+
+
+
+example:Geofenced rdfs:subClassOf example:Place .
+example:Tunnel rdfs:subClassOf example:Place .
+example:MainTunnel rdfs:subClassOf example:Tunnel .
+
+
+ogc:within rdfs:range example:Place . 
+
+sosa:hasFeatureOfInterest rdfs:range sosa:FeatureOfInterest . 
+sosa:madeObservation rdfs:range sosa:Observation . 
+sosa:observedProperty rdfs:range sosa:ObservableProperty . 
+
+sosa:madeObservation rdfs:domain sosa:Sensor . 
+sosa:hasSimpleResult rdfs:domain sosa:Observation . 
+sosa:resultTime rdfs:domain sosa:Observation . 
+sosa:hasFeatureOfInterest rdfs:domain sosa:Observation . 
+sosa:observedProperty rdfs:domain sosa:Observation . 

@@ -1,0 +1,324 @@
+*************** KNOWN PREDICATES
+*************** These are the definitions of the predicates that we want to consider
+
+START PREDICATE 
+SIGNATURE     tunnel(?x)
+LABEL         tunnel ?x
+RDF           ?x rdf:type example:Tunnel .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     mainTunnel(?x)
+LABEL         main tunnel ?x
+RDF           ?x rdf:type example:MainTunnel .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     person(?x)
+LABEL         person ?x
+RDF           ?x rdf:type example:Person .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     place(?x)
+LABEL         place ?x
+RDF           ?x rdf:type example:Place .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     maxAllowedNearHumans(?x,?y)
+LABEL         ?x should never exceed ?y when humans are nearby
+RDF           ?x example:maxAllowed ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     highLevel(?x,?y)
+LABEL         levels of ?x above ?y are high
+RDF           ?x example:highLevel ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     extremeLevel(?x,?y)
+LABEL         levels of ?x above ?y are extreme
+RDF           ?x example:extremeLevel ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     minAllowedNearHumans(?x,?y)
+LABEL         ?x should never be less than ?y when humans are nearby
+RDF           ?x example:minAllowed ?y .
+END PREDICATE
+
+*START PREDICATE 
+*SIGNATURE     dangerSituation()
+*LABEL         there is a danger
+*RDF           example:SituationFlag example:hasFlag example:Danger .
+*END PREDICATE
+
+START PREDICATE 
+SIGNATURE     >(?x,?y)
+LABEL         ?x is greater than ?y
+RDF           FILTER ( ?x > ?y )
+END PREDICATE
+
+*** OWL predicates
+
+START PREDICATE 
+SIGNATURE     disjoint(?x,?y)
+LABEL         a ?x cannot be a ?y
+RDF           ?x owl:disjointWith ?y .
+END PREDICATE
+
+*** Geographical predicates
+
+START PREDICATE 
+SIGNATURE     location(?x)
+LABEL         location ?x
+RDF           ?x rdf:type ogc:Geometry .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasLocation(?x,?y)
+LABEL         ?x is at ?y
+RDF           ?x ogc3:hasGeometry ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasWKTLocation(?x,?y,?z)
+LABEL         ?x is at ?y WTK: ?z 
+RDF           ?x ogc3:hasGeometry ?y . ?y ogc2:asWKT ?z .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     inside(?x,?y)
+LABEL         ?x is inside1 ?y
+RDF           ?x example:inside ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     insideWKT(?x,?y, ?xWKT, ?yWKT)
+LABEL         ?x is inside2 ?y
+RDF           ?x ogc2:asWKT ?xWKT . ?y ogc2:asWKT ?yWKT . FILTER (geof:sfContains( ?yWKT , ?xWKT ) && !sameTerm( ?x , ?y ))
+END PREDICATE
+
+*** Standard SSN predicates
+
+START PREDICATE 
+SIGNATURE     observation(?x)
+LABEL         observation ?x
+RDF           ?x rdf:type sosa:Observation .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     sensor(?x)
+LABEL         sensor ?x
+RDF           ?x rdf:type sosa:Sensor .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     observableProperty(?x)
+LABEL         property ?x
+RDF           ?x rdf:type sosa:ObservableProperty .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfInterest(?x)
+LABEL         feature ?x
+RDF           ?x rdf:type sosa:FeatureOfInterest .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     madeObservation(?x,?y)
+LABEL         ?x made observation ?y
+RDF           ?x sosa:madeObservation ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     measurementOfObservation(?x,?y)
+LABEL         the result of observation ?x is ?y
+RDF           ?x sosa:hasSimpleResult ?y .
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     timeOfObservation(?x,?y)
+LABEL         observation ?x was made at time ?y
+RDF           ?x sosa:resultTime ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     featureOfObservation(?x,?y)
+LABEL         observation ?x was made on ?y
+RDF           ?x sosa:hasFeatureOfInterest ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     propertyOfObservation(?x,?y)
+LABEL         observation ?x measured ?y
+RDF           ?x sosa:observedProperty ?y . 
+END PREDICATE
+
+*** RDFS
+
+START PREDICATE 
+SIGNATURE     triple(?x,?y, ?z)
+LABEL         ?x ?y ?z
+RDF           ?x ?y ?z . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     hasClass(?x,?y)
+LABEL         ?y ?x 
+RDF           ?x rdf:type ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     subClass(?x,?y)
+LABEL         a ?x is a ?y 
+RDF           ?x rdfs:subClassOf ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     domain(?x,?y)
+LABEL         domain of ?x is ?y
+RDF           ?x rdfs:domain ?y . 
+END PREDICATE
+
+START PREDICATE 
+SIGNATURE     range(?x,?y)
+LABEL         range of ?x is ?y 
+RDF           ?x rdfs:range ?y . 
+END PREDICATE
+
+*************** RULES
+*************** These are rules that we want to apply
+
+
+*** subclass inference
+START RULE hasClass(?x,?z) <-- hasClass(?x,?y) AND subClass(?y,?z)
+END RULE
+
+*** domain and range rules
+START RULE observation(?x) AND observableProperty(?y) <-- propertyOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND featureOfInterest(?y) <-- featureOfObservation(?x,?y)
+END RULE 
+
+START RULE observation(?x) <-- timeOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) <-- measurementOfObservation(?x,?y)
+END RULE
+
+START RULE observation(?x) AND sensor(?y) <-- madeObservation(?y,?x)
+END RULE
+
+*** geographical rules
+
+START RULE inside(?x,?y) <-- insideWKT(?x,?y, ?xWTK, ?yWTK)
+END RULE
+
+START RULE hasWKTLocation(?x,?b,?y) <-- propertyOfObservation(?z,example:Location) AND featureOfObservation(?z,?x) AND measurementOfObservation(?z,?y) 
+END RULE
+
+START RULE hasLocation(?x,?y) <-- hasWKTLocation(?x,?y,?z)
+END RULE
+
+*** elevating the property-feature-measurment triple
+
+START RULE [?v0]Of[?v1](?v4,?v2) <-- measurementOfObservation(?v3,?v2) AND propertyOfObservation(?v3,?v0) AND featureOfObservation(?v3,?v4) AND hasClass(?v4,?v1)
+LABEL      ?v0 of ?v1 ?v4 is ?v2 
+END RULE
+
+*** elevating the class name
+
+START RULE [?y](?x) <-- hasClass(?x,?y)
+LABEL      ?y ?x
+END RULE
+
+*** placement of entities inside other entities
+
+START RULE [?xC]In[?yC](?x,?y) <-- hasClass(?x,?xC) AND hasClass(?y,?yC) AND hasLocation(?x,?xL) AND hasLocation(?y,?yL) AND inside(?xL,?yL) AND place(?y)
+LABEL      ?xC ?x is in ?yC ?y
+END RULE
+
+*** measurements inside other entities
+
+START RULE [?v0CO2]MeasuredIn[?v4Room](?x,?y) <--  measurementOfObservation(?o,?x) AND propertyOfObservation(?o,?v0CO2) AND featureOfObservation(?o,?y) AND hasClass(?y, ?v4Room)
+LABEL      ?v0CO2 measured in ?v4Room ?y is ?x
+END RULE
+
+*** dangers and max allowed near humans
+
+START RULE [?v0CO2]Danger(?v2, ?limit,   ?xHuman,?v4RoomClass,?v4Room) <-- measurementOfObservation(?v3,?v2) AND propertyOfObservation(?v3,?v0CO2) AND featureOfObservation(?v3,?v4Room) AND hasLocation(?v4Room,?xLroom) AND maxAllowedNearHumans(?v0CO2,?limit) AND hasLocation(?xHuman,?xLhuman) AND inside(?xLhuman,?xLroom) AND hasClass(?xHuman,example:Person) AND hasClass(?v4Room, ?v4RoomClass) AND >(?v2,?limit)
+LABEL      There is a danger near human ?xHuman in ?v4RoomClass ?v4Room the value of ?v0CO2 has been detected to be ?v2 , above the limit of ?limit
+END RULE
+
+START RULE High[?v0CO2]Alert(?v2, ?limit,   ?xHuman,?v4RoomClass,?v4Room) <-- measurementOfObservation(?v3,?v2) AND propertyOfObservation(?v3,?v0CO2) AND featureOfObservation(?v3,?v4Room) AND hasLocation(?v4Room,?xLroom) AND highLevel(?v0CO2,?limit) AND hasClass(?v4Room, ?v4RoomClass) AND >(?v2,?limit)
+LABEL      There is a high level of ?v0CO2 in ?v4RoomClass ?v4Room because the measured value ?v2 is more than ?limit
+END RULE
+
+START RULE Extreme[?v0CO2]Alert(?v2, ?limit,   ?xHuman,?v4RoomClass,?v4Room) <-- measurementOfObservation(?v3,?v2) AND propertyOfObservation(?v3,?v0CO2) AND featureOfObservation(?v3,?v4Room) AND hasLocation(?v4Room,?xLroom) AND extremeLevel(?v0CO2,?limit) AND hasClass(?v4Room, ?v4RoomClass) AND >(?v2,?limit)
+LABEL      There is an extreme level of ?v0CO2 in ?v4RoomClass ?v4Room because the measured value ?v2 is more than ?limit
+END RULE
+
+*************** AVAILABLE PREDICATES
+*************** These are the predicates that we assume are available from the start, i.e. the predicates that we can infer from a database
+
+
+** Basic
+
+START AVAILABLE   featureOfObservation(?x,?y)
+START AVAILABLE   measurementOfObservation(?x,?y)
+START AVAILABLE   >(?x,?y)
+START AVAILABLE   person(?x)
+START AVAILABLE   insideWKT(?x,?y,?xl,?yl)
+
+START AVAILABLE ASSERTED   maxAllowedNearHumans(example:CO2concentration, 0)
+START AVAILABLE ASSERTED   maxAllowedNearHumans(example:Temperature, 0)
+
+START AVAILABLE ASSERTED   highLevel(example:CO2concentration, 35)
+START AVAILABLE ASSERTED   extremeLevel(example:CO2concentration, 70)
+
+START AVAILABLE ASSERTED   highLevel(example:Temperature, 30)
+START AVAILABLE ASSERTED   extremeLevel(example:Temperature, 40)
+
+START AVAILABLE ASSERTED   domain(sosa:madeObservation,sosa:Sensor)
+START AVAILABLE ASSERTED   range(sosa:madeObservation,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:hasSimpleResult,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:resultTime,sosa:Observation)
+START AVAILABLE ASSERTED   domain(sosa:hasFeatureOfInterest,sosa:Observation)
+START AVAILABLE ASSERTED   range(sosa:hasFeatureOfInterest,sosa:FeatureOfInterest)
+START AVAILABLE ASSERTED   domain(sosa:observedProperty,sosa:Observation)
+START AVAILABLE ASSERTED   range(sosa:observedProperty,sosa:ObservableProperty)
+
+START AVAILABLE ASSERTED   disjoint(example:Person,example:Place)
+START AVAILABLE ASSERTED   disjoint(sosa:Observation,example:Place)
+START AVAILABLE ASSERTED   disjoint(sosa:Observation,example:Person)
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,sosa:Observation)
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,example:Person)
+START AVAILABLE ASSERTED   disjoint(sosa:ObservableProperty,example:Place)
+START AVAILABLE ASSERTED   disjoint(sosa:FeatureOfInterest,sosa:Observation)
+START AVAILABLE ASSERTED   disjoint(sosa:FeatureOfInterest,sosa:ObservableProperty)
+
+START AVAILABLE ASSERTED   range(ogc:within,example:Place)
+START AVAILABLE ASSERTED   subClass(example:Tunnel,example:Place)
+START AVAILABLE ASSERTED   subClass(example:MainTunnel,example:Place)
+
+** Specific sensors
+
+START AVAILABLE   hasLocation(?x,?y)
+START AVAILABLE   propertyOfObservation(?x,example:CO2concentration)
+START AVAILABLE   propertyOfObservation(?x,example:Temperature)
+START AVAILABLE   tunnel(?x)
+START AVAILABLE   mainTunnel(?x)
+
+** Labels
+
+START AVAILABLE ASSERTED triple(example:CO2concentration,rdfs:label,"Carbon Dioxide CO2 concentration")
+START AVAILABLE ASSERTED triple(example:Temperature,rdfs:label,"Temperature")
+START AVAILABLE ASSERTED triple(example:Location,rdfs:label,"Location")
+START AVAILABLE ASSERTED triple(example:Person,rdfs:label,"person")
+START AVAILABLE ASSERTED triple(example:Tunnel,rdfs:label,"tunnel")
+START AVAILABLE ASSERTED triple(example:Place,rdfs:label,"location")
+START AVAILABLE ASSERTED triple(example:MainTunnel,rdfs:label,"main tunnel")
