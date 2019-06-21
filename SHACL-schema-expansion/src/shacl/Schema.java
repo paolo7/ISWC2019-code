@@ -1,5 +1,6 @@
 package shacl;
 
+import java.io.StringWriter;
 import java.util.Set;
 
 import org.apache.jena.rdf.model.Model;
@@ -47,7 +48,7 @@ public class Schema {
 	}
 	
 	public String pretty_print_string(){
-		String result = "-------------------\nSCHEMA: \n"
+		String result = "------------------------\nSCHEMA: \n"
 				+ "-Graph:\n";
 		for(Triple_Pattern tp : schema_Graph) {
 			result += "|  "+tp+"\n";
@@ -56,7 +57,11 @@ public class Schema {
 		for(Existential_Constraint ex : schema_Existentials) {
 			result += "|  "+ex+"\n";
 		}		
-		return result+"-------------------\n";
+		result += "-SHACL translation:\n\n";
+		StringWriter sw = new StringWriter();
+		schema_SHACL.write(sw, "TURTLE");
+		result += sw.toString();
+		return result+"\n------------------------\n";
 				
 	}
 }

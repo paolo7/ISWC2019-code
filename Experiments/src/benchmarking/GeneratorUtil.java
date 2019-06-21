@@ -23,6 +23,7 @@ import java.util.logging.LogManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.XMLSchema;
 
 import core.Triple_Pattern;
@@ -190,7 +191,7 @@ public class GeneratorUtil {
 			RDFUtil.filterRedundantPredicates(existingPredicates, newPredicates, false, false);
 			return new ScoreResult(time2-time1, newschemaSize, 0, sr.getAvgTime(), sr.applicableRules.size());
 		} else {
-			Existential_Validator.validate(schema, new HashSet<core.Rule>(rules));
+			Set<Existential_Constraint> retained_constraints = Existential_Validator.validate(schema, new HashSet<core.Rule>(rules));
 			long time2 = new Date().getTime();
 			return new ScoreResult(time2-time1, -1, 0, sr.getAvgTime(), sr.applicableRules.size());
 		}

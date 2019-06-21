@@ -42,10 +42,12 @@ public class runBenchmark {
 
 		PredicateInstantiationImpl.enable_additional_constraints = false;
 		// Experiment (b), testing the difference in scalability between the con(S,R) and con^{ex}(S,R) using the score approach
-		experiment_different_scalability_with_existentials();
+		experiment_2_different_scalability_with_existentials();
 		
 		// Experiment (a), testing the difference in computation time between the score and critical approaches
 		experiment_1_critical_and_score_scalability_comparision();
+
+		
 		
 	}
 	
@@ -172,19 +174,19 @@ public class runBenchmark {
 	}
 	
 	private static void experiment_1_critical_and_score_scalability_comparision() throws FileNotFoundException, CloneNotSupportedException, IOException, PythonExecutionException {
-		System.out.println("RUNNING EXPERIMENT 2 - Comparison as schema size increases");
+		System.out.println("RUNNING EXPERIMENT 1 - Comparison of SCORE and CRITICAL as schema size increases");
 		// each configuration tests the algorithms on inputs of different size
 		int configurations = 1000;
 		// for each configuration a number of repetitions is done and the average score is recorded
 		int repetitions = 10;
 		int stepIncrease = 4;
-		long millisecondTimeout = 10*60*1000; // 5 minutes timeout
+		long millisecondTimeout = 10*60*1000; // 10 minutes timeout
 		int atomsInAntecedent = 2;
 		double constantCreationRate = 0.1;
-		int ruleNum = 3;
+		int ruleNum = 4;
 		int initialSchemaviewSize =  5;
 		runCriticalInstancePerformanceComparisonSchemaSize2(
-				"Experiment 2",
+				"Experiment 1",
 				millisecondTimeout,
 				5,
 				repetitions,
@@ -196,7 +198,7 @@ public class runBenchmark {
 				true
 				);
 		runCriticalInstancePerformanceComparisonSchemaSize2(
-				"Experiment 2",
+				"Experiment 1",
 				millisecondTimeout,
 				configurations,
 				repetitions,
@@ -248,14 +250,14 @@ public class runBenchmark {
 				);
 	}
 	
-	private static void experiment_different_scalability_with_existentials() throws FileNotFoundException, CloneNotSupportedException, IOException, PythonExecutionException {
-		System.out.println("RUNNING EXPERIMENT 2 - Comparison as schema size increases");
+	private static void experiment_2_different_scalability_with_existentials() throws FileNotFoundException, CloneNotSupportedException, IOException, PythonExecutionException {
+		System.out.println("RUNNING EXPERIMENT 2 - Comparison of different scalability between Basic and Existential-Preserving schema consequences.");
 		// each configuration tests the algorithms on inputs of different size
 		int configurations = 100;
 		// for each configuration a number of repetitions is done and the average score is recorded
 		int repetitions = 50;
 		int stepIncrease = 10;
-		long millisecondTimeout = 10*60*1000; // 5 minutes timeout
+		long millisecondTimeout = 10*60*1000; // 10 minutes timeout
 		int atomsInAntecedent = 2;
 		double constantCreationRate = 0.1;
 		int ruleNum = 20;
@@ -676,7 +678,7 @@ public class runBenchmark {
 				stopRecordingSCORE = true;
 				System.out.println("STOP RECORDING SCORE AFTER COMPUTE TIME "+scoreGPPG.time);
 			}
-			System.out.print("\n["+j+"] ");
+			System.out.print("\n["+newschemaviewSize+"] ");
 			if(!stopRecordingCritical) {		
 				xAxisComlexityCritical.add((double)newschemaviewSize);
 				timeCritical.add(scoreCritical.time/1000);
@@ -944,12 +946,12 @@ public class runBenchmark {
 		    		//int sizeOfPredicateSpace = 7;
 		
 		// SCORE
-		List<Double> timeGPPG = new LinkedList<Double>();
-		List<Double> timeCritical = new LinkedList<Double>();
+		List<Double> timeSCORE = new LinkedList<Double>();
+		List<Double> timeExistential = new LinkedList<Double>();
 		//List<Double> timeGPPGeach = new LinkedList<Double>();
 		//List<Double> timeCriticaleach = new LinkedList<Double>();
-		List<Double> xAxisComlexityGPPG = new LinkedList<Double>();
-		List<Double> xAxisComlexityCritical = new LinkedList<Double>();
+		List<Double> xAxisComlexitySCORE = new LinkedList<Double>();
+		List<Double> xAxisComlexityExistential = new LinkedList<Double>();
 		
 		RDFUtil.excludePredicatesFromCriticalInstanceConstants = false;
 		
@@ -962,15 +964,15 @@ public class runBenchmark {
 		//long millisecondTimeout = 5*60*1000; // 5 minutes timeout
 		
 		String labelScore = "r'\\texttt{score}'";
-		String labelCritical = "r'\\texttt{existential-preserving}'";
+		String labelExistential = "r'\\texttt{existential-preserving}'";
 		String ylabel = "Seconds";
 		String xlabel = "Existential Constraints Size";
 		
-		boolean stopRecordingCritical = false;
+		boolean stopRecordingExistential = false;
 		boolean stopRecordingSCORE = false;
 		for(int j = 0; j <= configurations; j += stepIncrease) {
-			List<ScoreResult> scoresGPPG = new LinkedList<ScoreResult>();
-			List<ScoreResult> scoresCritical = new LinkedList<ScoreResult>();
+			List<ScoreResult> scoresSCORE = new LinkedList<ScoreResult>();
+			List<ScoreResult> scoresExistential = new LinkedList<ScoreResult>();
 			int newschemaviewSize = initialSchemaviewSize;
 			int newsizeOfPredicateSpace = (int) (((double)newschemaviewSize)*1.1); // J
 			int newconstantPool = newschemaviewSize;
@@ -982,13 +984,13 @@ public class runBenchmark {
 				if(i % 2 == 0) {
 					
 					// CRITICAL
-					if(!stopRecordingCritical) {
+					if(!stopRecordingExistential) {
 						try {
 							ScoreResult srCritical = GeneratorUtil.evaluatePerformanceIteration(existential_constraints, 3, newsizeOfPredicateSpace, newruleNum, i/2, newschemaviewSize, newAtomsInAntecedent, newconstantPool, constantCreationRate, true);
-							scoresCritical.add(srCritical);
-							if(GeneratorUtil.avgResult(scoresCritical).time*(scoresCritical.size()) > millisecondTimeout*repetitions) {
-								stopRecordingCritical = true;
-								System.out.println("EARLY TERMINATION! STOP RECORDING CRITICAL AFTER "+scoresCritical.size()+" COMPUTE TIME "+GeneratorUtil.avgResult(scoresCritical).time+" > "+repetitions+" times "+millisecondTimeout);
+							scoresExistential.add(srCritical);
+							if(GeneratorUtil.avgResult(scoresExistential).time*(scoresExistential.size()) > millisecondTimeout*repetitions) {
+								stopRecordingExistential = true;
+								System.out.println("EARLY TERMINATION! STOP RECORDING CRITICAL AFTER "+scoresExistential.size()+" COMPUTE TIME "+GeneratorUtil.avgResult(scoresExistential).time+" > "+repetitions+" times "+millisecondTimeout);
 								System.out.println("Last time recorded: "+srCritical.time);
 							}
 							
@@ -1003,7 +1005,7 @@ public class runBenchmark {
 					if(!stopRecordingSCORE) {		
 						try {
 							ScoreResult srSCORE = GeneratorUtil.evaluatePerformanceIteration(0, 3, newsizeOfPredicateSpace, newruleNum, i/2, newschemaviewSize, newAtomsInAntecedent, newconstantPool, constantCreationRate, true);				
-							scoresGPPG.add(srSCORE);
+							scoresSCORE.add(srSCORE);
 							
 						} catch (LiteralEnforcingException e) {
 							System.out.print("# ");
@@ -1016,44 +1018,44 @@ public class runBenchmark {
 				}				
 			}
 			// Average results
-			ScoreResult scoreGPPG = GeneratorUtil.avgResult(scoresGPPG);
-			ScoreResult scoreCritical = GeneratorUtil.avgResult(scoresCritical);
+			ScoreResult scoreSCORE = GeneratorUtil.avgResult(scoresSCORE);
+			ScoreResult scoreExistential = GeneratorUtil.avgResult(scoresExistential);
 			// terminate if average too high:
-			if(scoreCritical.time > millisecondTimeout) {
-				stopRecordingCritical = true;
-				System.out.println("STOP RECORDING CRITICAL AFTER COMPUTE TIME "+scoreCritical.time);
+			if(scoreExistential.time > millisecondTimeout) {
+				stopRecordingExistential = true;
+				System.out.println("STOP RECORDING CRITICAL AFTER COMPUTE TIME "+scoreExistential.time);
 			} 
-			if(scoreGPPG.time > millisecondTimeout) {
+			if(scoreSCORE.time > millisecondTimeout) {
 				stopRecordingSCORE = true;
-				System.out.println("STOP RECORDING SCORE AFTER COMPUTE TIME "+scoreGPPG.time);
+				System.out.println("STOP RECORDING SCORE AFTER COMPUTE TIME "+scoreSCORE.time);
 			}
-			System.out.print("\n["+j+"] ");
-			if(!stopRecordingCritical) {		
-				xAxisComlexityCritical.add((double)existential_constraints);
-				timeCritical.add(scoreCritical.time/1000);
+			System.out.print("\n["+existential_constraints+"] ");
+			if(!stopRecordingExistential) {		
+				xAxisComlexityExistential.add((double)existential_constraints);
+				timeExistential.add(scoreExistential.time/1000);
 				//timeCriticaleach.add(scoreCritical.averageRuleApplicationTime);
-				System.out.print(" Critical: "+scoreCritical.time);
+				System.out.print(" SCORE (existential preserving): "+scoreExistential.time);
 				//System.out.println(j+"               Critical2 "+scoreCritical.averageRuleApplicationTime);				
 			}
 			if(!stopRecordingSCORE) {		
 				//timeGPPGeach.add(scoreGPPG.averageRuleApplicationTime);
-				xAxisComlexityGPPG.add((double)existential_constraints);
-				timeGPPG.add(scoreGPPG.time/1000);
-				System.out.print(" SCORE: "+scoreGPPG.time);
+				xAxisComlexitySCORE.add((double)existential_constraints);
+				timeSCORE.add(scoreSCORE.time/1000);
+				System.out.print(" SCORE (basic): "+scoreSCORE.time);
 				//System.out.println(j+"               GPPG2 "+scoreGPPG.averageRuleApplicationTime);
 			}
-			String pythonDataSCORE = xAxisComlexityGPPG+","+timeGPPG;
-			String pythonDataCRITICAL = xAxisComlexityCritical+","+timeCritical;
+			String pythonDataSCORE = xAxisComlexitySCORE+","+timeSCORE;
+			String pythonDataExistential = xAxisComlexityExistential+","+timeExistential;
 			System.out.println("\n plt.plot("+pythonDataSCORE+", linestyle='-', marker=',', color='C0', label="+labelScore+")\n");
-			System.out.println(" plt.plot("+pythonDataCRITICAL+", linestyle='-', marker='^', color='C1', label="+labelCritical+")\n");
+			System.out.println(" plt.plot("+pythonDataExistential+", linestyle='-', marker='^', color='C1', label="+labelExistential+")\n");
 			System.out.print("\n");
 		}
 		
 		
 		
 		if(!warmup) {
-			String pythonDataSCORE = xAxisComlexityGPPG+","+timeGPPG;
-			String pythonDataCRITICAL = xAxisComlexityCritical+","+timeCritical;
+			String pythonDataSCORE = xAxisComlexitySCORE+","+timeSCORE;
+			String pythonDataExistential = xAxisComlexityExistential+","+timeExistential;
 			String pythonScript = "from mpl_toolkits.mplot3d import Axes3D\n" + 
 					"from matplotlib.pyplot import figure\n" + 
 					"from matplotlib import rcParams\n" + 
@@ -1078,7 +1080,7 @@ public class runBenchmark {
 					"# average time cutoff "+millisecondTimeout+" milliseconds\n"+
 					"# number of different datasets per configuration: "+repetitions+"\n\n"+
 					"plt.plot("+pythonDataSCORE+", linestyle='-', marker='o', color='C0', label="+labelScore+")\n" + 
-					"plt.plot("+pythonDataCRITICAL+", linestyle='-', marker='^', color='C1', label="+labelCritical+")\n" + 
+					"plt.plot("+pythonDataExistential+", linestyle='-', marker='^', color='C1', label="+labelExistential+")\n" + 
 					"plt.ylabel('"+ylabel+"')\n"+
 					"plt.xlabel('"+xlabel+"')\n"+
 					"plt.legend()\n"+
