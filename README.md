@@ -39,13 +39,13 @@ The first experiment is run with method `experiment_1_critical_and_score_scalabi
 * When an experiment is run, it will first perform a warmup run to reduce the performance effect of a cold-start. You can disergard the outputs of the warmup run. 
 * Depending on the machine you are running it on, these experiments might take any time between a few minutes to several hours. See below for information on how to configure the experiments if you want to try different variations or speed up the experiments.
 
-The main output of the experiment will be two lists `C` and `T` for each algorithm, where `C[x]` is the value of the core parameter studied by the experiment (i.e. number of triples in the schema graph for experiment 1, and number of existential constraints for experiment 2), and `T[x]` is the average compuation time with configuration `C[x]`.
+The main output of the experiment will be two lists `C` and `T` for each algorithm, where `C[x]` is the value of the core parameter studied by the experiment (i.e. number of triples in the schema graph for experiment 1, and number of existential constraints for experiment 2) in each configuration, and `T[x]` is the average compuation time with configuration `C[x]`.
 To make the results easy to visualise, these lists for each algorithm will be outputted as matplotlib plot scripts. At the end of each experiment, a full script will be produced. You can copy this code and run it as a Python script to visualise the results. This code will be displayed in the console output, and also saved in file `Experiments\resultOutputs.txt`.
 
 
 #### Interim results
 
-Since the experiments might run for a long time, this implementation prints plot traces after testing each configuration of the experiment.
+Since the experiments might run for a long time, this implementation prints plot traces after testing each configuration of the experiment. An example interim plot is displayed below:
 
 
 ```
@@ -78,25 +78,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-#### Inspecting schemas and rules.
-
-Sets of inference rules are obtained from rule files, these randomly generated rule files are created on demand whenever experiments are run and reused if the same configuration of rules is reused. After running an experiment for the first time, rule files can be found in folder `Experiment\chasebench\GPPG\`. Schemas are generated using these rulesets and are not saved to file.
-
-To inspect schemas, rules, and the corresponding effect of computing a schema expansion, you can do the following:
-
-Place a breakpoint in the method `evaluatePerformanceIteration` (line 184 of `GeneratorUtil.java`) and run the experiment in debug mode. Then, once execution stops on this breakpoint, create the following new watch expressions:
-* `rules` this object contains the list of rules used for the schema expansion
-* `schema.pretty_print_string()` this is a string representation of (1) the schema graph, (2) its existential constraints, if any, and (3) the SHACL representation of this graph. For simplicity, the no-literal set is not modelled as a separate object. Instead, each variable will be displayed with a `+` or a `-` symbol next to it. Variables with a `-` symbol are included in the no-literal set, while the ones with a `+` are not.
-
-
-To view the new schema graph and no-literal set after a basic schema expansion, place a breakpoint at line 189 (at line `int newschemaSize = newPredicates.size();`) and watch expression `newPredicates`.
-To view the set of `retained_constraints`, place a breakpoint at line 195 (at line `long time2 = new Date().getTime();`) and watch expression `retained_constraints`.
-
-Note: if you want to see existential constraints, run the second experiment in debug mode, and place the breakpoint to view the schema after the first configuration is complete (as the first configuration has no existential constraints).
-
-Note: debug interruptions to inspect schema and rules do not stop the timer that calculates algorithm performance. So if you interrupt the execution, the final experiment results will not be correct.
-
-
 #### Experiment configuration
 
 You can easily fine tune the experiments by changing the parameters inside methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`. The parameters you can change are the following:
@@ -113,4 +94,24 @@ Parameters of the starting configuration:
 Each experiment tests two algorithms across multiple configurations, each time averaging over a number of repetitions.
 
 * `repetitions`: the number of times each configuration will be tested. The output in the plots will be the average of this many repetitions. You can reduce this number to increase performance, although it would introduce more noise. 
-* `stepIncrease` and `configurations`: each experiment starts by testing the starting configuration, as defined by the previous parameters. It will then modify the core parameter studied by the experiment (`initialSchemaviewSize` for experiment 1, and `existentials` for experiment 2) by incrementing it of the amount specified in `stepIncrease` and test this new configuration. This process will terminate when the the core parameter studied by the experiment exceeds `configurations`. For example, in experiment 2, if `existentials=0`, `stepIncrease=10`, and `configurations=100`, then the experiment will test 11 different configurations of `existentials`: `[0,10,20,30,40,50,60,70,80,90,100]`.
+* `stepIncrease` and `configurations`: each experiment starts by testing the starting configuration, as defined by the previous parameters. It will then modify the core parameter studied by the experiment (`initialSchemaviewSize` for experiment 1, and `existentials` for experiment 2) by incrementing it of the amount specified in `stepIncrease` and test this new configuration. This process will continue until the core parameter studied by the experiment exceeds `configurations`. For example, in experiment 2, if `existentials=0`, `stepIncrease=10`, and `configurations=100`, then the experiment will test 11 different configurations of `existentials`: `[0,10,20,30,40,50,60,70,80,90,100]`.
+
+#### Inspecting schemas and rules.
+
+Sets of inference rules are obtained from rule files, these randomly generated rule files are created on demand whenever experiments are run and reused if the same configuration of rules is reused. After running an experiment for the first time, rule files can be found in folder `Experiment\chasebench\GPPG\`. Schemas are generated using these rulesets and are not saved to file.
+
+To inspect schemas, rules, and the corresponding effect of computing a schema expansion, you can do the following:
+
+Place a breakpoint in the method `evaluatePerformanceIteration` (line 184 of `GPPGbenchmark\src\benchmarking\GeneratorUtil.java`) and run the experiment in debug mode. Then, once execution stops on this breakpoint, create the following new watch expressions:
+* `rules` this object contains the list of rules used for the schema expansion
+* `schema.pretty_print_string()` this is a string representation of (1) the schema graph, (2) its existential constraints, if any, and (3) the SHACL representation of this graph. For simplicity, the no-literal set is not modelled as a separate object. Instead, each variable will be displayed with a `+` or a `-` symbol next to it. Variables with a `-` symbol are included in the no-literal set, while the ones with a `+` are not.
+
+
+To view the new schema graph and no-literal set after a basic schema expansion, place a breakpoint at line 189 (at line `int newschemaSize = newPredicates.size();`) and watch expression `newPredicates`.
+To view the set of `retained_constraints`, place a breakpoint at line 195 (at line `long time2 = new Date().getTime();`) and watch expression `retained_constraints`.
+
+Note 1: make sure you wait until the warmup run is finished before activating the breakpoint, or you might not be visualising the schemas and rulesets that you expect.
+
+Note 2: if you want to inspect existential constraints, run the second experiment in debug mode, and place the breakpoint to view the schema after the first configuration is complete (as the first configuration has no existential constraints).
+
+Note 3: debug interruptions to inspect schema and rules do not stop the timer that calculates algorithm performance. So if you interrupt the execution, the final experiment results will not be correct.
