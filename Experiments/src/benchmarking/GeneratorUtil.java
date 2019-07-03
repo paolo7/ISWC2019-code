@@ -137,7 +137,13 @@ public class GeneratorUtil {
 		return evaluatePerformanceIteration(-1, approach, sizeOfPredicateSpace, numOfRules, datasetID, schemaviewSize, constraintSize, constantPool, constantCreationRate, randomSchema);
 	} 
 	
+	public static boolean debug_mode = false;
+	
 	public static ScoreResult evaluatePerformanceIteration(int existentials, int approach, int sizeOfPredicateSpace, int numOfRules, int datasetID, int schemaviewSize, int constraintSize, int constantPool, double constantCreationRate, boolean randomSchema) throws FileNotFoundException, CloneNotSupportedException, IOException {
+		if(debug_mode) {
+			System.out.println("\n\n ### SCHEMA EXPANSION ITERATION ");
+			System.out.println(" ### Method = " + (approach == 4 ? "CRITICAL" : "SCORE") + (existentials < 0 ? "(basic schema consequence)" : "(existential preserving schema consequence)"));
+		}
 		// load the set of predicates and rules
 		Set<Predicate> returnPredicates = new HashSet<Predicate>(); 
 		ArrayList<Rule> returnRulesList = new ArrayList<Rule>();
@@ -181,20 +187,38 @@ public class GeneratorUtil {
 			schema = new Schema(schemaGraphPattern,	schema_Existentials
 					);
 		}
+		if(debug_mode) {
+			System.out.println("\n # ORIGINAL RULES:");
+			System.out.println(core.Rule.prettyPrintRuleset(rules));
+			System.out.println("\n # ORIGINAL SCHEMA:");
+			System.out.println(schema.pretty_print_string());
+		}
 		System.gc();
 		long time1 = new Date().getTime();
 		StatRecorder sr = new StatRecorder();
-		if(existentials < 0) {
-			Set<PredicateInstantiation> newPredicates = expansion.expand(approach, existingPredicates,sr);
+		ScoreResult result = null;
+		Set<Existential_Constraint> retained_constraints = schema.getSchema_Existentials();
+		Set<PredicateInstantiation> newPredicates = null;
+		if(existentials < 0 || debug_mode) {
+			newPredicates = expansion.expand(approach, existingPredicates,sr);
 			int newschemaSize = newPredicates.size();
 			long time2 = new Date().getTime();
 			RDFUtil.filterRedundantPredicates(existingPredicates, newPredicates, false, false);
-			return new ScoreResult(time2-time1, newschemaSize, 0, sr.getAvgTime(), sr.applicableRules.size());
-		} else {
-			Set<Existential_Constraint> retained_constraints = Existential_Validator.validate(schema, new HashSet<core.Rule>(rules));
+			result = new ScoreResult(time2-time1, newschemaSize, 0, sr.getAvgTime(), sr.applicableRules.size());
+		} 
+		if(existentials >= 0){
+			retained_constraints = Existential_Validator.validate(schema, new HashSet<core.Rule>(rules));
 			long time2 = new Date().getTime();
-			return new ScoreResult(time2-time1, -1, 0, sr.getAvgTime(), sr.applicableRules.size());
+			result = new ScoreResult(time2-time1, -1, 0, sr.getAvgTime(), sr.applicableRules.size());
 		}
+		if(debug_mode) {
+			newPredicates.addAll(existingPredicates);
+			Set<Triple_Pattern> newSchemaGraphPattern = Existential_Validator.util_translate_PredicateInstantiation_2_Triple_Patterns(newPredicates);
+			Schema expandedSchema = new Schema(newSchemaGraphPattern,	retained_constraints );
+			System.out.println(" # SCHEMA AFTER EXPANSION:");
+			System.out.println(expandedSchema.pretty_print_string());
+		}
+		return result;
 		/*int newSchemaNoVars = 0;
 		for(PredicateInstantiation pi : newPredicates) {
 			boolean allVars = true;

@@ -64,4 +64,8 @@ public class Schema {
 		return result+"\n------------------------\n";
 				
 	}
+	
+	public void expand() {
+		
+	}
 }

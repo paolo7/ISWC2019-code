@@ -100,17 +100,11 @@ Each experiment tests two algorithms across multiple configurations, each time a
 
 Sets of inference rules are obtained from rule files, these randomly generated rule files are created on demand whenever experiments are run and reused if the same configuration of rules is reused. After running an experiment for the first time, rule files can be found in folder `Experiment\chasebench\GPPG\`. Schemas are generated using these rulesets and are not saved to file.
 
-To inspect schemas, rules, and the corresponding effect of computing a schema expansion, you can do the following:
+To inspect schemas, rules, and the corresponding effect of computing a schema expansion, you can enable debug-print mode. To do so, uncomment line 44 (`GeneratorUtil.debug_mode = false;`) in `runBenchmark.java`. In debug-print mode, the system will print to console the type of schema expansion being performed, the rules being used, and the schema before and after expansion. Schemas will be printed both in the triplestore schema and in the SHACL format. For simplicity, the no-literal set is not modelled as a separate object. Instead, each variable will be displayed with a `+` or a `-` symbol next to it. Variables with a `-` symbol are included in the no-literal set, while the ones with a `+` are not. When running debug-print mode, you might want to increase the size of the Eclipse console, if you cannot visualise all the text of large schemas.
 
-Place a breakpoint in the method `evaluatePerformanceIteration` (line 184 of `GPPGbenchmark\src\benchmarking\GeneratorUtil.java`) and run the experiment in debug mode. Then, once execution stops on this breakpoint, create the following new watch expressions:
-* `rules` this object contains the list of rules used for the schema expansion
-* `schema.pretty_print_string()` this is a string representation of (1) the schema graph, (2) its existential constraints, if any, and (3) the SHACL representation of this graph. For simplicity, the no-literal set is not modelled as a separate object. Instead, each variable will be displayed with a `+` or a `-` symbol next to it. Variables with a `-` symbol are included in the no-literal set, while the ones with a `+` are not.
+You can also inspect the java objects by placing a breakpoint in the method `evaluatePerformanceIteration` (line 190 of `GPPGbenchmark\src\benchmarking\GeneratorUtil.java`) and run the experiment in debug mode. Then, once execution stops on this breakpoint, you can create watch expressions such as `rules` (this object contains the list of rules used for the schema expansion) and `schema` (the object representation of a schema). 
 
-
-To view the new schema graph and no-literal set after a basic schema expansion, place a breakpoint at line 189 (at line `int newschemaSize = newPredicates.size();`) and watch expression `newPredicates`.
-To view the set of `retained_constraints`, place a breakpoint at line 195 (at line `long time2 = new Date().getTime();`) and watch expression `retained_constraints`.
-
-Note 1: make sure you wait until the warmup run is finished before activating the breakpoint, or you might not be visualising the schemas and rulesets that you expect.
+Note 1: make sure you wait until the warmup run is finished before activating the breakpoint, or you might not be visualising the schemas and rulesets that you expect. Also, the first configuration of experiment 2 does not contain existential constraints.
 
 Note 2: if you want to inspect existential constraints, run the second experiment in debug mode, and place the breakpoint to view the schema after the first configuration is complete (as the first configuration has no existential constraints).
 

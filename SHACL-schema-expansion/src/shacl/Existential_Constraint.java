@@ -96,7 +96,8 @@ public class Existential_Constraint {
 	
 	@Override
 	public String toString() {
-		return antecedent+ " ==> "+consequent;
+		return antecedent.toString().replaceAll("\\+","").replaceAll("-","") + " ==> "
+				+consequent.toString().replaceAll("\\+","").replaceAll("-","");
 	}
 	
 	public String toSPARQL_antecedent() {

@@ -1,5 +1,6 @@
 package core;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -25,6 +26,14 @@ public class Rule {
 	@Override
 	public String toString() {
 		return antecedent+" ==> "+consequent;
+	}
+	
+	public static String prettyPrintRuleset(List<Rule> list) {
+		String result = ") Ruleset:";
+		for(Rule r : list) {
+			result += "\n) "+r;
+		}
+		return result;
 	}
 	
 }

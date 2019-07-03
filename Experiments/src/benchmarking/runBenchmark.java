@@ -40,15 +40,18 @@ public class runBenchmark {
 		RDFUtil.disableRedundancyCheck = true;
 		RDFUtil.ignoreConstraints = true;
 
+		//// Uncomment the following line to enable debug prints into console of all the schema expansions
+		// GeneratorUtil.debug_mode = false;
+		
 		PredicateInstantiationImpl.enable_additional_constraints = false;
-		// Experiment (b), testing the difference in scalability between the con(S,R) and con^{ex}(S,R) using the score approach
-		experiment_2_different_scalability_with_existentials();
 		
 		// Experiment (a), testing the difference in computation time between the score and critical approaches
 		experiment_1_critical_and_score_scalability_comparision();
 
+		// Experiment (b), testing the difference in scalability between the con(S,R) and con^{ex}(S,R) using the score approach
+		experiment_2_different_scalability_with_existentials();
 		
-		
+		if(GeneratorUtil.debug_mode == true) System.out.println("WARNING, debug mode was active, so the recorded computation time might not be accurate.");
 	}
 	
 	/**
@@ -1004,7 +1007,7 @@ public class runBenchmark {
 					// SCORE
 					if(!stopRecordingSCORE) {		
 						try {
-							ScoreResult srSCORE = GeneratorUtil.evaluatePerformanceIteration(0, 3, newsizeOfPredicateSpace, newruleNum, i/2, newschemaviewSize, newAtomsInAntecedent, newconstantPool, constantCreationRate, true);				
+							ScoreResult srSCORE = GeneratorUtil.evaluatePerformanceIteration(-1, 3, newsizeOfPredicateSpace, newruleNum, i/2, newschemaviewSize, newAtomsInAntecedent, newconstantPool, constantCreationRate, true);				
 							scoresSCORE.add(srSCORE);
 							
 						} catch (LiteralEnforcingException e) {
