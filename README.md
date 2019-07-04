@@ -4,7 +4,7 @@ This repository contains four Java Eclipse projects:
 
 1. *CoreLogic*. This project contains the core classes to compute simple schema consequence and rule applicability using the SCORE and CRITICAL approaches. The two approaches are defined in the `SchemaExpansionBySPARQLquery.java` Java class.
 
-2. *ExperimentsDataGenerator*. This project contains `Existential_Validator.java` the core class to compute the existential preserving schema consequence (reusing using the SCORE approache). It also contains classes to translate SHACL descriptions into Triplestore schemas and vice versa (`Translator_to_SHACL.java` and `Translator_to_Graph_Pattern.java`). 
+2. *SHACL-schema-expansion*. This project contains `Existential_Validator.java` the core class to compute the existential preserving schema consequence (using the SCORE approach). It also contains classes to translate SHACL descriptions into Triplestore schemas and vice versa (`Translator_to_SHACL.java` and `Translator_to_Graph_Pattern.java`). 
 
 3. *ExperimentsDataGenerator*. This project contains the classes needed to generate random schema and rulesets. These will be stored (and reused in later runs) under the `chasebench\GPPG\` subfolder.
 
@@ -16,7 +16,7 @@ These experiments will output python code to plot the results (requires the `mat
 
 ## System Setup
 
-* To setup the system you will need Java and Eclipse IDE (it was tested on Java 1.8 and Eclipse Oxigen). To visualise the results of the experiments you will need Python and `matplotlib` library (tested with Python 2.7.12). We have tested it with a standard Java virtual machine running on Ubuntu 16.04 with 15.5 GB RAM, an Intel Core i7-6700 Processor. However these should not be seen as minimum requirements, and the code should also run as intended on less performing machines.
+* To setup the system you will need Java and Eclipse IDE (it was tested on Java 1.8 and Eclipse Oxigen). To visualise the results of the experiments you will need Python and `matplotlib` library (tested with Python 2.7.12). The code was tested with a standard Java virtual machine running on Ubuntu 16.04 with 15.5 GB RAM, an Intel Core i7-6700 Processor. However these should not be seen as minimum requirements, and the code should also run as intended on less performing machines.
 
 * Load this project in Eclipse. You can do this by downloading this repository, and then, in Eclipse, selecting "File -> Open project from file system", and chosing the directory where you have downloaded this project. The Eclipse Package Explorer should now contain the 4 required projects. This project uses Maven to fetch the required libraries. There is no need to download datasets, as this project automatically creates the artificial datasets it needs to run.
 
