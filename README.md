@@ -2,25 +2,15 @@
 
 This repository contains four Java Eclipse projects:
 
-#### 1. CoreLogic
+1. *CoreLogic*. This project contains the core classes to compute simple schema consequence and rule applicability using the SCORE and CRITICAL approaches. The two approaches are defined in the `SchemaExpansionBySPARQLquery.java` Java class.
 
-This project contains the core classes to compute simple schema consequence and rule applicability using the SCORE and CRITICAL approaches. The two approaches are defined in the `SchemaExpansionBySPARQLquery.java` Java class.
+2. *ExperimentsDataGenerator*. This project contains `Existential_Validator.java` the core class to compute the existential preserving schema consequence (reusing using the SCORE approache). It also contains classes to translate SHACL descriptions into Triplestore schemas and vice versa (`Translator_to_SHACL.java` and `Translator_to_Graph_Pattern.java`). 
 
-#### 3. ExperimentsDataGenerator
+3. *ExperimentsDataGenerator*. This project contains the classes needed to generate random schema and rulesets. These will be stored (and reused in later runs) under the `chasebench\GPPG\` subfolder.
 
-This project contains `Existential_Validator.java` the core class to compute the existential preserving schema consequence (reusing using the SCORE approache). 
-It also contains classes to translate SHACL descriptions into Triplestore schemas and vice versa (`Translator_to_SHACL.java` and `Translator_to_Graph_Pattern.java`). 
-
-#### 4. ExperimentsDataGenerator
-
-This project contains the classes needed to generate random schema and rulesets. These will be stored (and reused in later runs) under the `chasebench\GPPG\` subfolder.
-
-#### 5. Experiments
-
-This project contains the runnable main class (in the `runBenchmark` Java class) that will start two experiments:
-
-1. The experiment to compare the computation time of the SCORE and CRITICAL approaches.
-2. The experiment to evaluate the computation time of the simple vs. existential preserving schema consequence.
+4. *Experiments*. This project contains the runnable main class (in the `runBenchmark` Java class) that will start two experiments:
+..* The first experiment to compare the computation time of the SCORE and CRITICAL approaches.
+..* The second experiment to evaluate the computation time of the simple vs. existential preserving schema consequence.
 
 These experiments will output python code to plot the results (requires the `matplotlib` library).
 
@@ -34,13 +24,15 @@ These experiments will output python code to plot the results (requires the `mat
 
 ## Running the experiments
 
-Once you have setup the system, you can run both experiments through the main method in `runBenchmark.java` in the Experiments sub-project. If necessary, set up a new Java run configuration in Eclipse to run it. The first and second experiments are run using the methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`, respectively. If you want to run only one of them, you can comment out the other one in the main method of `runBenchmark`. 
+* Once you have setup the system, you can run both experiments through the main method in `runBenchmark.java` in the Experiments sub-project. If necessary, set up a new Java run configuration in Eclipse to run it. The first and second experiments are run using the methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`, respectively. If you want to run only one of them, you can comment out the other one in the main method of `runBenchmark`. 
 
 * When an experiment is run, it will first perform a warmup run to reduce the performance effect of a cold-start. You can disergard the outputs of the warmup run. 
+
 * Depending on the machine you are running it on, these experiments might take any time between a few minutes to several hours. See below for information on how to configure the experiments if you want to try different variations or speed up the experiments.
 
-The main output of the experiment will be two lists `C` and `T` for each algorithm, where `C[x]` is the value of the core parameter studied by the experiment (i.e. number of triples in the schema graph for experiment 1, and number of existential constraints for experiment 2) in each configuration, and `T[x]` is the average compuation time with configuration `C[x]`.
-To make the results easy to visualise, these lists for each algorithm will be outputted as matplotlib plot scripts. At the end of each experiment, a full script will be produced. You can copy this code and run it as a Python script to visualise the results. This code will be displayed in the console output, and also saved in file `Experiments\resultOutputs.txt`.
+* The main output of the experiment will be two lists `C` and `T` for each algorithm, where `C[x]` is the value of the core parameter studied by the experiment (i.e. number of triples in the schema graph for experiment 1, and number of existential constraints for experiment 2) in each configuration, and `T[x]` is the average compuation time with configuration `C[x]`.
+
+* To make the results easy to visualise, these lists for each algorithm will be outputted as matplotlib plot scripts. At the end of each experiment, a full script will be produced. You can copy this code and run it as a Python script to visualise the results. This code will be displayed in the console output, and also saved in file `Experiments\resultOutputs.txt`.
 
 
 #### Interim results
