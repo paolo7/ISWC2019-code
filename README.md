@@ -24,17 +24,17 @@ This project contains the runnable main class (in the `runBenchmark` Java class)
 
 These experiments will output python code to plot the results (requires the `matplotlib` library).
 
-## Installation instructions
+## System Setup
 
-To run this project you will need Java and Eclipse IDE (it was tested on Java 1.8 and Eclipse Oxigen). To visualise the results of the experiments you will need Python and `matplotlib` library (tested with Python 2.7.12).
+* To setup the system you will need Java and Eclipse IDE (it was tested on Java 1.8 and Eclipse Oxigen). To visualise the results of the experiments you will need Python and `matplotlib` library (tested with Python 2.7.12). We have tested it with a standard Java virtual machine running on Ubuntu 16.04 with 15.5 GB RAM, an Intel Core i7-6700 Processor. However these should not be seen as minimum requirements, and the code should also run as intended on less performing machines.
 
-1. Load this project in Eclipse. You can do this by downloading this repository, and then, in Eclipse, selecting "File -> Open project from file system", and chosing the directory where you have downloaded this project. The Eclipse Package Explorer should now contain the 4 required projects.
+* Load this project in Eclipse. You can do this by downloading this repository, and then, in Eclipse, selecting "File -> Open project from file system", and chosing the directory where you have downloaded this project. The Eclipse Package Explorer should now contain the 4 required projects. This project uses Maven to fetch the required libraries. There is no need to download datasets, as this project automatically creates the artificial datasets it needs to run.
 
-2. If Eclipse is detecting a cycle error "A cycle was detected in the build path of project..." set circular dependencies from errors to warnings here "Windows -> Preferences -> Java-> Compiler -> Building -> Circular Dependencies". The project should now be ready to run.
+* If Eclipse is detecting a cycle error "A cycle was detected in the build path of project..." set circular dependencies from errors to warnings here "Windows -> Preferences -> Java-> Compiler -> Building -> Circular Dependencies". The project should now be ready to run.
 
-3. Run the main method in `runBenchmark.java` in the Experiments sub-project. If necessary, set up a new Java run configuration in Eclipse to run it. This method will run two experiments.
+## Running the experiments
 
-The first experiment is run with method `experiment_1_critical_and_score_scalability_comparision()` and the second with method `experiment_2_different_scalability_with_existentials()`. If you want to run only one of them, you can comment out the other one in the main method of `runBenchmark`. 
+Once you have setup the system, you can run both experiments through the main method in `runBenchmark.java` in the Experiments sub-project. If necessary, set up a new Java run configuration in Eclipse to run it. The first and second experiments are run using the methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`, respectively. If you want to run only one of them, you can comment out the other one in the main method of `runBenchmark`. 
 
 * When an experiment is run, it will first perform a warmup run to reduce the performance effect of a cold-start. You can disergard the outputs of the warmup run. 
 * Depending on the machine you are running it on, these experiments might take any time between a few minutes to several hours. See below for information on how to configure the experiments if you want to try different variations or speed up the experiments.
@@ -45,8 +45,7 @@ To make the results easy to visualise, these lists for each algorithm will be ou
 
 #### Interim results
 
-Since the experiments might run for a long time, this implementation prints plot traces after testing each configuration of the experiment. An example interim plot is displayed below:
-
+For convenience, since the experiments might run for a long time, this implementation prints plot traces after each configuration of the experiment is tested. An example interim plot is displayed below:
 
 ```
 [17]  Critical: 14772.7 SCORE: 8.8
@@ -78,9 +77,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-#### Experiment configuration
+## Experiment configuration
 
-You can easily fine tune the experiments by changing the parameters inside methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`. The parameters you can change are the following:
+You can easily configure the experiments by changing the parameters inside methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()` in `runBenchmark.java` in the Experiments sub-project. The parameters you can change are the following:
 
 Parameters of the starting configuration:
 
