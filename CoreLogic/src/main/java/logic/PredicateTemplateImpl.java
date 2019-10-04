@@ -71,7 +71,7 @@ public class PredicateTemplateImpl extends PredicateTemplateAbstr{
 			}
 			if(translationToRDFFilters.size() == 0) translationToRDFFilters = null;
 			List<TextTemplate> textLabel = new LinkedList<TextTemplate>();
-			for(TextTemplate tt : label) {
+			if(label != null )for(TextTemplate tt : label) {
 				if(tt.isText()) textLabel.add(tt);
 				else {
 					RDFNode newBinding = bindingsMap.get("v"+tt.getVar());

@@ -35,10 +35,10 @@ public class PredicateUtil {
 		Predicate predicate = null;
 		for(Predicate p : predicates) {
 			if(p.getName().toLowerCase().equals(name.toLowerCase()) && p.getVarnum() == varNum) {
-				if(predicate == null)
+				//if(predicate == null)
 					predicate = p;
-				else
-					throw new RuntimeException("ERROR: the set of predicates contain more than one entry with predicate name "+name+" and "+varNum+" variables");
+				//else
+				//	throw new RuntimeException("ERROR: the set of predicates contain more than one entry with predicate name "+name+" and "+varNum+" variables");
 			}
 		}
 		if(predicate != null)
