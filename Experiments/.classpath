@@ -13,11 +13,11 @@
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/SchemaQueryGenerator"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Simulator2D"/>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/shacl-schema-expansion"/>
+	<classpathentry kind="lib" path="target/dependency/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="target/dependency/matplotlib4j-0.4.0.jar"/>
+	<classpathentry kind="lib" path="target/dependency/rdf4j-model-2.4.2.jar"/>
+	<classpathentry kind="lib" path="target/dependency/rdf4j-util-2.4.2.jar"/>
+	<classpathentry kind="lib" path="target/dependency/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
