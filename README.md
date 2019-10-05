@@ -46,7 +46,7 @@ If you have trouble setting up the project, you can try the following steps:
 
 Note: if you are having trouble running the plot scripts, you can try:
 * change: `rc('font', **{…}` to `plt.rc('font', **{…}`
-* comment out snippet: `'size': \['larger'\]` 
+* comment out snippet: `'size': ['larger']` 
 
 #### Interim results
 
