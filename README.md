@@ -22,6 +22,16 @@ These experiments will output python code to plot the results (requires the `mat
 
 * If Eclipse is detecting a cycle error "A cycle was detected in the build path of project..." set circular dependencies from errors to warnings here "Windows -> Preferences -> Java-> Compiler -> Building -> Circular Dependencies". The project should now be ready to run.
 
+### In Depth Setup
+
+If you have trouble setting up the project, you can try the following steps:
+
+* Download the whole project as a zip file
+* Open a fresh new workspace on Eclipse. There should be no projects there to begin with. To do so go to File --> Switch Workspace --> Other... , and create a new one.
+* Go to the workbench, then File --> Open Project from file system --> Archive, then select the zip file that you just downloaded, then click finish. The project should now be loaded in your workbench
+* Go to Windows --> Preferences --> Java --> Compiler --> Building --> Circular Dependencies and set Circular Dependencies to Warning instead of Error. Then click “apply and close” and say yes to do a full rebuild.
+* In project explorer, go to GPPGbenchmark --> src --> benchmarking, then right click on runBenchmark.java and select Run as --> Java Application
+
 ## Running the experiments
 
 * Once you have setup the system, you can run both experiments through the main method in `runBenchmark.java` in the Experiments sub-project (called `GPPGbenchmark` in Eclipse). If necessary, set up a new Java run configuration in Eclipse to run it. The first and second experiments are run using the methods `experiment_1_critical_and_score_scalability_comparision()` and `experiment_2_different_scalability_with_existentials()`, respectively. You might want to run one of them at a time, to make sure you can inspect their console outputs. In that case you can comment out the other one in the main method of `runBenchmark`. 
@@ -34,6 +44,9 @@ These experiments will output python code to plot the results (requires the `mat
 
 * To make the results easy to visualise, these lists for each algorithm will be outputted as matplotlib plot scripts. At the end of each experiment, a full script will be produced. You can copy this code and run it as a Python script to visualise the results. This code will be displayed in the console output, and also saved in file `Experiments\resultOutputs.txt`.
 
+Note: if you are having trouble running the plot scripts, you can try:
+* change: `rc('font', **{…}` to `plt.rc('font', **{…}`
+* comment out snippet: `'size': \['larger'\]` 
 
 #### Interim results
 
